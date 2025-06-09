@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= series.title %></title>
+</head>
+<body>
+  <h1><%= series.title %></h1>
+  <img src="<%= series.image %>" alt="Poster" style="max-width:200px"><br>
+  <p><strong>Description:</strong> <%= series.description %></p>
+  <p><strong>Genre:</strong> <%= series.genre %></p>
+  <p><strong>Characters:</strong> <%= series.leadCharacters.join(', ') %></p>
+  <p><strong>Year:</strong> <%= series.airYear %></p>
+  <p><strong>Status:</strong> <%= series.isCompleted ? "Completed ✅" : "Ongoing ⏳" %></p>
+
+  <a href="/series/<%= series._id %>/edit">✏️ Edit</a> |
+  <form action="/series/<%= series._id %>?_method=DELETE" method="POST" style="display:inline;">
+    <button type="submit">🗑️ Delete</button>
+  </form>
+  <br><br>
+  <a href="/series">← Back</a>
+</body>
+</html>

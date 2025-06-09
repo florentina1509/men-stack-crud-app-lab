@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Turkish Series Tracker</title>
+</head>
+<body>
+  <h1>📺 All Turkish Series</h1>
+  <a href="/series/new">➕ Add New Series</a>
+  <ul>
+    <% series.forEach(s => { %>
+      <li>
+        <a href="/series/<%= s._id %>"><strong><%= s.title %></strong></a>
+        - <%= s.genre %> - <%= s.airYear %>
+        <% if (s.isCompleted) { %> ✅ <% } else { %> ⏳ <% } %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

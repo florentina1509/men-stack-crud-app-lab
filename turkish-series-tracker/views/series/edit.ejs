@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Söz</title>
+</head>
+<body>
+  <h1>Edit Series: Söz</h1>
+  <form action="/series/soz-id?_method=PUT" method="POST">
+    <label>Title: <input type="text" name="title" value="Söz"></label><br>
+    <label>Description: 
+      <input type="text" name="description" value="A special forces team fights terrorism while dealing with personal struggles.">
+    </label><br>
+    <label>Genre: <input type="text" name="genre" value="Action, Drama, Military"></label><br>
+    <label>Characters: 
+      <input type="text" name="leadCharacters" value="Yavuz, Bahar, Ateş, Fethi">
+    </label><br>
+    <label>Year: <input type="number" name="airYear" value="2017"></label><br>
+    <label>Image URL: 
+      <input type="text" name="image" value="https://example.com/soz-poster.jpg">
+    </label><br>
+    <label>Completed: 
+      <input type="checkbox" name="isCompleted" checked>
+    </label><br>
+    <button type="submit">Save Changes</button>
+  </form>
+  <br>
+  <a href="/series/soz-id">← Cancel</a>
+</body>
+</html>
